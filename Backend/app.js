@@ -19,6 +19,7 @@ app.use('/students', studentsRouter);
 // Middleware tanımlama
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use('/api/v1/student', studentsRouter)
 
 // Ana sayfa
 
