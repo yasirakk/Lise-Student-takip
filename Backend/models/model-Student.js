@@ -1,11 +1,11 @@
 /*
-  firstName: "Ayşe",
-  lastName: "Demir",
-  age: 18,
-  passportNumber: "XYZ789",
-  nationality: "Türkiye",
-  scholarship: false,
-  highSchoolGrade: 2 // Lise 2 mezunu
+  "firstName": "Ayşe",
+  "lastName": "Demir",
+  "age": 18,
+  "passportNumber": "XYZ789",
+  "nationality": "Türkiye",
+  "scholarship": false,
+  "highSchoolGrade": 2
 */
 const mongoose = require('mongoose');
 

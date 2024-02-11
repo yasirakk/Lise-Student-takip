@@ -11,10 +11,8 @@ const connect = require('./db/connect_mongoose');
 const studentsRouter = require('./routes/stu_router');
 require('dotenv').config()
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2001;
 
-// Öğrenci işlemleri için routes'leri kullanma
-app.use('/students', studentsRouter);
 
 // Middleware tanımlama
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,7 +27,7 @@ const start = async () => {
     try {
         await connect(process.env.MONGODB_URL);
         app.listen(port, () => {
-            console.log("sunucu çalışmaya başladı....." + port);
+            console.log(`sunucu ${port} portun da çalışıyor`);
         })
     } catch (error) {
         console.log(error);
