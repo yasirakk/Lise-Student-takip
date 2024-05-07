@@ -1,7 +1,7 @@
 // studentsController.js
 // find
 
-const Student = require('../models/model-Student');
+const Student = require('../models/studentSchema');
 
 // Öğrenci ekleme işlevi
 async function createStudent(req, res) {

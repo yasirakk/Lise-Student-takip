@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const connect = require('./db/connect_mongoose');
 const studentsRouter = require('./routes/stu_router');
+const teachersRouter = require('./routes/teachers_router');
 require('dotenv').config()
 
 const port = process.env.PORT || 2001;
@@ -17,8 +18,9 @@ const port = process.env.PORT || 2001;
 // Middleware tanımlama
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use('/api/v1/student', studentsRouter)
 
+app.use('/api/v1/student', studentsRouter)
+app.use('/api/v1/teacher', teachersRouter)
 // Ana sayfa
 
 
